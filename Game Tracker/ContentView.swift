@@ -45,13 +45,16 @@ struct ContentView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 20) {
                     ForEach(games) { game in
-                        GameRow(game: game)
+                        NavigationLink(destination: GameDetailView(game: game)) {
+                            GameRow(game: game)
+                        }
                     }
                 }
                 .padding(.horizontal)
             }
         }
     }
+
 }
 
 #Preview {

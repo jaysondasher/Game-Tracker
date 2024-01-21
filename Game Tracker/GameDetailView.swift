@@ -14,9 +14,12 @@ struct GameDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                Image(game.backgroundImage) // Placeholder image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                AsyncImage(url: URL(string: game.backgroundImage)) { image in
+                                    image.resizable()
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                                .aspectRatio(contentMode: .fit)
 
                 VStack(alignment: .leading, spacing: 10) {
                     Text(game.name)
@@ -45,8 +48,6 @@ struct GameDetailView: View {
     }
 }
 
-struct GameDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameDetailView(game: Game.sampleGames[0])
-    }
+#Preview {
+    ContentView()
 }

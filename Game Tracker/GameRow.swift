@@ -12,13 +12,13 @@ struct GameRow: View {
 
     var body: some View {
         HStack {
-            // For preview purposes, use a system image. In production, you would load the image from the URL.
-                        Image(systemName: game.backgroundImage) // Replace with `RemoteImage(url: game.backgroundImage)` for real URLs
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 100, height: 100)
-                .clipped()
-                .cornerRadius(8)
+            AsyncImage(url: URL(string: game.backgroundImage)) { image in
+                            image.resizable()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(width: 100, height: 100)
+                        .cornerRadius(8)
 
             VStack(alignment: .leading) {
                 Text(game.name)
