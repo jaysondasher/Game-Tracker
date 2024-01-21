@@ -8,11 +8,35 @@
 import SwiftUI
 
 struct SearchView: View {
+    @State private var searchText = ""
+    @State private var searchResults: [Game] = []
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                ForEach(searchResults, id: \.id) { game in
+                    GameRow(game: game)
+                }
+            }
+            .navigationBarTitle("Search Games")
+            .navigationBarItems(trailing:
+                Button("Search") {
+                    // Trigger the search functionality
+                    performSearch()
+                }
+            )
+            .searchable(text: $searchText, prompt: "Search for a game")
+        }
+    }
+
+    private func performSearch() {
+        // Implement search functionality here
+        // Call RAWG API and update searchResults based on the response
     }
 }
 
-#Preview {
-    SearchView()
+struct SearchView_Previews: PreviewProvider {
+    static var previews: some View {
+        SearchView()
+    }
 }
