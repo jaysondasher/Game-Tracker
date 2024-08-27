@@ -8,7 +8,7 @@
 import Foundation
 
 class RAWGService {
-    let apiKey: String = "ee25ccb74e51456e835e238acdbafcb9"
+    let apiKey: String = Config.rawgApiKey
     let baseURL = "https://api.rawg.io/api/games"
 
 

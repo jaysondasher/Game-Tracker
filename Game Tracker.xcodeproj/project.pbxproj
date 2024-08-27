@@ -19,6 +19,7 @@
 		30DA48332B58CE1300E5E6A9 /* Game_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA48322B58CE1300E5E6A9 /* Game_TrackerApp.swift */; };
 		30DA48372B58CE1400E5E6A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30DA48362B58CE1400E5E6A9 /* Assets.xcassets */; };
 		30DA483A2B58CE1400E5E6A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30DA48392B58CE1400E5E6A9 /* Preview Assets.xcassets */; };
+		30E20EB62C7E593700CB2DE7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E20EB52C7E593700CB2DE7 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		30DA48322B58CE1300E5E6A9 /* Game_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_TrackerApp.swift; sourceTree = "<group>"; };
 		30DA48362B58CE1400E5E6A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30DA48392B58CE1400E5E6A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		30E20EB52C7E593700CB2DE7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		30DA48312B58CE1300E5E6A9 /* Game Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				30E20EB52C7E593700CB2DE7 /* Config.swift */,
 				30DA48322B58CE1300E5E6A9 /* Game_TrackerApp.swift */,
 				309BE9A22B58D11500D12F5E /* ContentView.swift */,
 				309BE9AA2B5DA4AE00D12F5E /* WishlistView.swift */,
@@ -165,6 +168,7 @@
 				309BE9AD2B5DA5C100D12F5E /* GameDetailView.swift in Sources */,
 				309BE9AB2B5DA4AE00D12F5E /* WishlistView.swift in Sources */,
 				309BE9A32B58D11500D12F5E /* ContentView.swift in Sources */,
+				30E20EB62C7E593700CB2DE7 /* Config.swift in Sources */,
 				309BE9AF2B5DA5FA00D12F5E /* GameViewModel.swift in Sources */,
 				309BE9A52B5DA2B100D12F5E /* Game.swift in Sources */,
 				309BE9A72B5DA2F100D12F5E /* GameRow.swift in Sources */,
